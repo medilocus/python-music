@@ -41,6 +41,10 @@ class Track:
 
     @classmethod
     def from_elements(cls, elements: Tuple[Any]):
+        """
+        Initializes track with elements.
+        :param elements: Tuple of elements.
+        """
         track = cls()
         for e in elements:
             track.add_element(e)
