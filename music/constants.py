@@ -18,17 +18,20 @@
 #
 
 
-NOTE_DOUBLE_WHOLE: int = 6
-NOTE_WHOLE: int = 4
-NOTE_HALF: int = 2
-NOTE_QUARTER: int = 0
-NOTE_8TH: int = 1
-NOTE_16TH: int = 3
-NOTE_32TH: int = 5
-NOTE_64TH: int = 7
+BLACK: int = 0
+WHITE: int = 1
 
-NATURAL: int = 20
-SHARP: int = 21
-DOUBLE_SHARP: int = 23
-FLAT: int = 22
-DOUBLE_FLAT: int = 24
+NOTE_DOUBLE_WHOLE: int = 16
+NOTE_WHOLE: int = 14
+NOTE_HALF: int = 12
+NOTE_QUARTER: int = 10
+NOTE_8TH: int = 11
+NOTE_16TH: int = 13
+NOTE_32TH: int = 15
+NOTE_64TH: int = 17
+
+NATURAL: int = 30
+SHARP: int = 31
+DOUBLE_SHARP: int = 33
+FLAT: int = 32
+DOUBLE_FLAT: int = 34
