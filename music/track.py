@@ -19,7 +19,7 @@
 
 from typing import Any, List, Tuple
 from .constants import *
-from .note import Note
+from .elements import Note
 
 
 class Track:
