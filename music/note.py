@@ -37,12 +37,6 @@ class Note:
         self.note_type = note_type
         self.dots = dots
 
-    def get_len(self):
-        return Note.type_to_len(self.note_type)
-
-    def get_name(self):
-        return Note.type_to_name(self.note_type)
-
     @staticmethod
     def type_to_len(note_type: int) -> float:
         """
