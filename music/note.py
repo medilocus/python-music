@@ -1,5 +1,5 @@
 #
-#  Python-musuic
+#  Python-music
 #  Python music module.
 #  Copyright Medilocus 2021
 #
