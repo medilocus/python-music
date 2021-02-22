@@ -20,3 +20,5 @@
 from .constants import *
 from .track import Track
 from .note import Note
+
+__version__ = "0.0.1"
