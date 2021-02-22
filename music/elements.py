@@ -141,3 +141,14 @@ class Tempo:
         :param bpm: Beats per minute.
         """
         return cls(60/bpm*1000)
+
+
+class TimeSignature:
+    """Time signature element."""
+
+    numerator: int
+    denominator: int
+
+    def __init__(self, n: int, d: int) -> None:
+        self.numerator = n
+        self.denominator = d
