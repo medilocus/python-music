@@ -17,6 +17,21 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #
 
+from typing import Any, List
+from .constants import *
+from .note import Note
+
 
 class Track:
-    pass
+    """
+    Single track class.
+    Contains notes, tempo changes, time signatures, ...
+    """
+
+    elements: List[Any]
+
+    def __init__(self):
+        """
+        Initializes track.
+        """
+        self.elements = []
