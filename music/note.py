@@ -60,7 +60,7 @@ class Note:
         elif note_type == NOTE_64TH:
             return 1 / 16
 
-        raise ValueError(f"Note type {note_type} not implemented.")
+        raise TypeError(f"Note type {note_type} not implemented.")
 
     @staticmethod
     def type_to_name(note_type: int) -> str:
