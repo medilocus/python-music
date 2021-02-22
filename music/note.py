@@ -88,12 +88,18 @@ class Note:
         raise ValueError(f"Note type {note_type} not implemented.")
 
     @staticmethod
-    def color(pitch: int) -> int:
+    def pitch_color(pitch: int) -> int:
         """
         Determines the color of a note. Color is defined by the color on a standard piano.
         """
         black = (pitch-4) % 12 in (1, 3, 6, 8, 10)
         return BLACK if black else WHITE
+
+    def color(self) -> int:
+        """
+        Determines the color of self.
+        """
+        return Note.pitch_color(self.pitch)
 
     def base_length(self):
         """
