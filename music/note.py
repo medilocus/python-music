@@ -61,3 +61,28 @@ class Note:
             return 1 / 16
 
         raise ValueError(f"Note type {note_type} not implemented.")
+
+    @staticmethod
+    def type_to_name(note_type: int) -> str:
+        """
+        Converts from a type (music.NOTE_QUARTER) to a name ("Quarter")
+        :param note_type: Type of note.
+        """
+        if note_type == NOTE_QUARTER:
+            return "Quarter"
+        elif note_type == NOTE_HALF:
+            return "Half"
+        elif note_type == NOTE_WHOLE:
+            return "Whole"
+        elif note_type == NOTE_DOUBLE_WHOLE:
+            return "Double Whole"
+        elif note_type == NOTE_8TH:
+            return "8th"
+        elif note_type == NOTE_16TH:
+            return "16th"
+        elif note_type == NOTE_32TH:
+            return "32nd"
+        elif note_type == NOTE_64TH:
+            return "64th"
+
+        raise ValueError(f"Note type {note_type} not implemented.")
