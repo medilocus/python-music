@@ -19,6 +19,11 @@
 
 
 class Note:
-    def __init__(self, pitch, type):
+    def __init__(self, pitch: int, type: int) -> None:
+        """
+        Initializes note.
+        :param pitch: Integer pitch of note. The lowest note on piano is 21.
+        :param type: Note length, defined in constants: music.NOTE_QUARTER, music.NOTE_HALF, ...
+        """
         self.pitch = pitch
         self.type = type
