@@ -27,7 +27,7 @@ class Note:
     note_type: int
     dots: int
 
-    def __init__(self, pitch: int, note_type: int, dots: int = 0) -> None:
+    def __init__(self, pitch: int, note_type: int = NOTE_QUARTER, dots: int = 0) -> None:
         """
         Initializes note.
         :param pitch: Integer pitch of note. The lowest note on piano is 21.
@@ -36,6 +36,12 @@ class Note:
         self.pitch = pitch
         self.note_type = note_type
         self.dots = dots
+
+    def get_len(self):
+        return Note.type_to_len(self.note_type)
+
+    def get_name(self):
+        return Note.type_to_name(self.note_type)
 
     @staticmethod
     def type_to_len(note_type: int) -> float:
@@ -60,7 +66,7 @@ class Note:
         elif note_type == NOTE_64TH:
             return 1 / 16
 
-        raise ValueError(f"Note type {note_type} not implemented.")
+        raise TypeError(f"Note type {note_type} not implemented.")
 
     @staticmethod
     def type_to_name(note_type: int) -> str:
