@@ -18,3 +18,4 @@
 #
 
 from .track import Track
+from .note import Note
