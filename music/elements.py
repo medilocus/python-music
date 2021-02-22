@@ -134,6 +134,9 @@ class Tempo:
         """
         self.mspb = mspb
 
+    def __repr__(self) -> str:
+        return f"<Tempo object, mspb={self.mspb}>"
+
     @classmethod
     def from_bpm(cls, bpm: float):
         """
@@ -152,3 +155,6 @@ class TimeSignature:
     def __init__(self, n: int, d: int) -> None:
         self.numerator = n
         self.denominator = d
+
+    def __repr__(self) -> str:
+        return f"<TimeSignature object, n={self.numerator}, d={self.denominator}"

@@ -39,6 +39,9 @@ class Track:
         """
         self.elements = []
 
+    def __repr__(self) -> str:
+        return f"<Track object, {len(self.elements)} elements>"
+
     @classmethod
     def from_elements(cls, elements: Tuple[Any]):
         """
