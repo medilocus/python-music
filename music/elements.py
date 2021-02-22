@@ -21,7 +21,7 @@ from .constants import *
 
 
 class Note:
-    """Class for a single note."""
+    """Single note element."""
 
     pitch: int
     note_type: int
@@ -120,3 +120,24 @@ class Note:
             length += add_len
             add_len /= 2
         return length
+
+
+class Tempo:
+    """Tempo element."""
+
+    mspb: float
+
+    def __init__(self, mspb: float) -> None:
+        """
+        Initializes tempo element.
+        :param mspb: Milliseconds per beat.
+        """
+        self.mspb = mspb
+
+    @classmethod
+    def from_bpm(cls, bpm: float):
+        """
+        Initializes tempo with a bpm value.
+        :param bpm: Beats per minute.
+        """
+        return cls(60/bpm*1000)
