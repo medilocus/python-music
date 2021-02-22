@@ -17,6 +17,8 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #
 
+from .constants import *
+
 
 class Note:
     """Class for a single note."""
@@ -34,3 +36,28 @@ class Note:
         self.pitch = pitch
         self.type = type
         self.dots = dots
+
+    @staticmethod
+    def type_to_len(type: int) -> float:
+        """
+        Converts from a type (music.NOTE_QUARTER) to a length (1)
+        :param type: Type of note.
+        """
+        if type == NOTE_QUARTER:
+            return 1
+        elif type == NOTE_HALF:
+            return 2
+        elif type == NOTE_WHOLE:
+            return 4
+        elif type == NOTE_DOUBLE_WHOLE:
+            return 8
+        elif type == NOTE_8TH:
+            return 1 / 2
+        elif type == NOTE_16TH:
+            return 1 / 4
+        elif type == NOTE_32TH:
+            return 1 / 8
+        elif type == NOTE_64TH:
+            return 1 / 16
+
+        raise ValueError(f"Note type {type} not implemented.")
