@@ -86,3 +86,15 @@ class Note:
             return "64th"
 
         raise ValueError(f"Note type {note_type} not implemented.")
+
+    def base_length(self):
+        """
+        Returns this note's length without any dots.
+        """
+        return Note.type_to_len(self.note_type)
+
+    def total_length(self):
+        """
+        Returns this note's total length (with dots).
+        """
+        return Note.type_to_len(self.note_type) * 1.5**self.dots
