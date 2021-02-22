@@ -31,7 +31,7 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/medilocus/python-music",
-    py_modules=["python-music"],
+    py_modules=["music"],
     packages=setuptools.find_packages(),
     install_requires=[
     ],
