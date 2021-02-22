@@ -17,7 +17,7 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #
 
-from typing import Any, List
+from typing import Any, List, Tuple
 from .constants import *
 from .note import Note
 
@@ -30,8 +30,15 @@ class Track:
 
     elements: List[Any]
 
-    def __init__(self):
+    def __init__(self) -> None:
         """
         Initializes track.
         """
         self.elements = []
+
+    @classmethod
+    def from_elements(cls, elements: Tuple[Any]):
+        track = cls()
+        for e in elements:
+            track.add_element(e)
+        return track
