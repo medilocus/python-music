@@ -157,4 +157,4 @@ class TimeSignature:
         self.denominator = d
 
     def __repr__(self) -> str:
-        return f"<TimeSignature object, n={self.numerator}, d={self.denominator}"
+        return f"<TimeSignature object, n={self.numerator}, d={self.denominator}>"
