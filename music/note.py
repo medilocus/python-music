@@ -85,4 +85,4 @@ class Note:
         elif note_type == NOTE_64TH:
             return "64th"
 
-        raise ValueError(f"Note type {note_type} not implemented.")
+        raise TypeError(f"Note type {note_type} not implemented.")
