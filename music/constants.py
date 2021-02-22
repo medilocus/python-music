@@ -18,11 +18,11 @@
 #
 
 
-NOTE_DOUBLE_WHOLE: int = 3
-NOTE_WHOLE: int = 2
-NOTE_HALF: int = 1
+NOTE_DOUBLE_WHOLE: int = 6
+NOTE_WHOLE: int = 4
+NOTE_HALF: int = 2
 NOTE_QUARTER: int = 0
-NOTE_8TH: int = -1
-NOTE_16TH: int = -2
-NOTE_32TH: int = -3
-NOTE_64TH: int = -4
+NOTE_8TH: int = 1
+NOTE_16TH: int = 3
+NOTE_32TH: int = 5
+NOTE_64TH: int = 7
