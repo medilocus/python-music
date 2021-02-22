@@ -30,6 +30,9 @@ class Track:
 
     elements: List[Any]
 
+    default_tsig: Tuple[int] = (4, 4)
+    default_tempo: float = 120
+
     def __init__(self) -> None:
         """
         Initializes track.
