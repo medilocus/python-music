@@ -37,6 +37,9 @@ class Note:
         self.note_type = note_type
         self.dots = dots
 
+    def __repr__(self) -> str:
+        return f"<Note object, pitch={self.pitch}, type={Note.type_to_name(self.note_type).lower()}>"
+
     @staticmethod
     def type_to_len(note_type: int) -> float:
         """
