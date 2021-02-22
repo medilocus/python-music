@@ -26,3 +26,9 @@ NOTE_8TH: int = 1
 NOTE_16TH: int = 3
 NOTE_32TH: int = 5
 NOTE_64TH: int = 7
+
+NATURAL: int = 20
+SHARP: int = 21
+DOUBLE_SHARP: int = 23
+FLAT: int = 22
+DOUBLE_FLAT: int = 24
