@@ -97,4 +97,9 @@ class Note:
         """
         Returns this note's total length (with dots).
         """
-        return Note.type_to_len(self.note_type) * 1.5**self.dots
+        length = self.base_length()
+        add_len = length / 2
+        for i in range(self.dots):
+            length += add_len
+            add_len /= 2
+        return length
