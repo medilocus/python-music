@@ -49,3 +49,10 @@ class Track:
         for e in elements:
             track.add_element(e)
         return track
+
+    def add_element(self, element):
+        """
+        Adds an element.
+        :param element: Element to add.
+        """
+        self.elements.append(element)
