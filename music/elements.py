@@ -26,6 +26,7 @@ class Note:
     pitch: int
     note_type: int
     dots: int
+    tied: bool
 
     def __init__(self, pitch: int, note_type: int = NOTE_QUARTER, dots: int = 0) -> None:
         """
@@ -36,6 +37,7 @@ class Note:
         self.pitch = pitch
         self.note_type = note_type
         self.dots = dots
+        self.tied = False
 
     def __repr__(self) -> str:
         return f"<Note object, pitch={self.pitch}, type={Note.type_to_name(self.note_type).lower()}>"
