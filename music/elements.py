@@ -23,24 +23,29 @@ from .constants import *
 class Note:
     """Single note element."""
 
-    pitch: int
+    base_note: int
+    accidentals: int
+    octave: int
     note_type: int
     dots: int
     tied: bool
 
-    def __init__(self, pitch: int, note_type: int = N_QUARTER, dots: int = 0) -> None:
+    def __init__(self, base_note: int, acccidentals: int, octave: int, note_type: int = N_QUARTER,
+            dots: int = 0) -> None:
         """
         Initializes note.
         :param pitch: Integer pitch of note. The lowest note on piano is 21.
         :param note_type: Note length, defined in constants: music.N_QUARTER, music.N_HALF, ...
         """
-        self.pitch = pitch
+        self.base_note = base_note
+        self.accidentals = acccidentals
+        self.octave = octave
         self.note_type = note_type
         self.dots = dots
         self.tied = False
 
     def __repr__(self) -> str:
-        return f"<Note object, pitch={self.pitch}, type={Note.type_to_name(self.note_type).lower()}>"
+        return f"<Note object, pitch={self.pitch()}, type={Note.type_to_name(self.note_type).lower()}>"
 
     @staticmethod
     def type_to_len(note_type: int) -> float:
@@ -122,6 +127,11 @@ class Note:
             length += add_len
             add_len /= 2
         return length
+
+    def pitch(self):
+        """
+        Calculates integer pitch based on base_note, accidentals, and octave.
+        """
 
 
 class Tempo:
