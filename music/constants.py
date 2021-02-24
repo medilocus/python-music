@@ -21,14 +21,14 @@
 BLACK: int = 0
 WHITE: int = 1
 
-NOTE_DOUBLE_WHOLE: int = 16
-NOTE_WHOLE: int = 14
-NOTE_HALF: int = 12
-NOTE_QUARTER: int = 10
-NOTE_8TH: int = 11
-NOTE_16TH: int = 13
-NOTE_32TH: int = 15
-NOTE_64TH: int = 17
+N_DOUBLE_WHOLE: int = 16
+N_WHOLE: int = 14
+N_HALF: int = 12
+N_QUARTER: int = 10
+N_8TH: int = 11
+N_16TH: int = 13
+N_32TH: int = 15
+N_64TH: int = 17
 
 NATURAL: int = 30
 SHARP: int = 31
