@@ -18,7 +18,6 @@
 #
 
 from .constants import *
-from .track import Track
 from .elements import Note, Tempo, TimeSignature
 
 __version__ = "0.0.2"
