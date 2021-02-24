@@ -30,12 +30,12 @@ class Note:
     dots: int
     tied: bool
 
-    def __init__(self, base_note: int, acccidentals: int, octave: int, note_type: int = N_QUARTER,
+    def __init__(self, base_note: int, acccidentals: int, octave: int, note_type: int = L_QUARTER,
             dots: int = 0) -> None:
         """
         Initializes note.
         :param pitch: Integer pitch of note. The lowest note on piano is 21.
-        :param note_type: Note length, defined in constants: music.N_QUARTER, music.N_HALF, ...
+        :param note_type: Note length, defined in constants: music.L_QUARTER, music.L_HALF, ...
         """
         self.base_note = base_note
         self.accidentals = acccidentals
@@ -50,24 +50,24 @@ class Note:
     @staticmethod
     def type_to_len(note_type: int) -> float:
         """
-        Converts from a type (music.N_QUARTER) to a length (1)
+        Converts from a type (music.L_QUARTER) to a length (1)
         :param note_type: Type of note.
         """
-        if note_type == N_QUARTER:
+        if note_type == L_QUARTER:
             return 1
-        elif note_type == N_HALF:
+        elif note_type == L_HALF:
             return 2
-        elif note_type == N_WHOLE:
+        elif note_type == L_WHOLE:
             return 4
-        elif note_type == N_DOUBLE_WHOLE:
+        elif note_type == L_DOUBLE_WHOLE:
             return 8
-        elif note_type == N_8TH:
+        elif note_type == L_8TH:
             return 1 / 2
-        elif note_type == N_16TH:
+        elif note_type == L_16TH:
             return 1 / 4
-        elif note_type == N_32TH:
+        elif note_type == L_32TH:
             return 1 / 8
-        elif note_type == N_64TH:
+        elif note_type == L_64TH:
             return 1 / 16
 
         raise TypeError(f"Note type {note_type} not implemented.")
@@ -75,24 +75,24 @@ class Note:
     @staticmethod
     def type_to_name(note_type: int) -> str:
         """
-        Converts from a type (music.N_QUARTER) to a name ("Quarter")
+        Converts from a type (music.L_QUARTER) to a name ("Quarter")
         :param note_type: Type of note.
         """
-        if note_type == N_QUARTER:
+        if note_type == L_QUARTER:
             return "Quarter"
-        elif note_type == N_HALF:
+        elif note_type == L_HALF:
             return "Half"
-        elif note_type == N_WHOLE:
+        elif note_type == L_WHOLE:
             return "Whole"
-        elif note_type == N_DOUBLE_WHOLE:
+        elif note_type == L_DOUBLE_WHOLE:
             return "Double Whole"
-        elif note_type == N_8TH:
+        elif note_type == L_8TH:
             return "8th"
-        elif note_type == N_16TH:
+        elif note_type == L_16TH:
             return "16th"
-        elif note_type == N_32TH:
+        elif note_type == L_32TH:
             return "32nd"
-        elif note_type == N_64TH:
+        elif note_type == L_64TH:
             return "64th"
 
         raise ValueError(f"Note type {note_type} not implemented.")
